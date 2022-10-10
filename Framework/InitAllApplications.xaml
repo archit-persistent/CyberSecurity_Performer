@@ -1,0 +1,149 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Initialize_Applications" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>914,1030.66666666667</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Initialization_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Management.Automation</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Management.Automation</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>TimeSpan2</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="924,966" sap2010:WorkflowViewState.IdRef="Sequence_9">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: QRadar - Dashboard" sap:VirtualizedContainerService.HintSize="882,843.333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="8b6ea225-9bc5-440d-8248-bffe046e0cd9" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="848,585.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="806,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+            <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Dashboard'" sap:VirtualizedContainerService.HintSize="806,428.666666666667" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="8b6ea225-9bc5-440d-8248-bffe046e0cd9" Version="V1">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="376,189.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;QRadar is already Logged in&quot;]" />
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="376,208.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Login\Login.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://ng-siem.persistent.co.in/console/qradar/jsp/QRadar.jsp" DesignTimeRectangle="35, 203, 126, 48" ElementType="Text" FriendlyName="'Dashboard'" FullSelectorArgument="&lt;webctrl tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='A' type='' class='sy-header__favourites__link' aaname='Dashboard' check:innerText='Dashboard' /&gt;" Guid="d2119ca6-3964-4c64-8637-d5952337ac14" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIIAAAA0CAYAAABGkOCVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAKeSURBVHhe7ZrBTewwEIa3Ea6vBHrgVfF6oQAK2AIogAsN7G0P3Dkg0QGIu1/yx449EzvJLkiw4RvpE1LijJ2ZL87uit3V9U0A2P35+y8AsCOAQAQQiAACEUAgAghEAIEIIBABBCKAQAQQiAACEUAgAghEAIEIIBABBCKAQAQQRoT7l9CI13BfjPsyHl4Xc2tN70/htnLu27h7Cm/dsp4fKuculKkIlaLfHj+6Ex/hcGePfxpE+DGsEmHp3Nkgwg9hv16E6s3HY2X44ihnEW/HfT6fRNDfHGWOtKZDmae2Rr+W2hg3j93l9uHw3s19zHnGdbjcacxmROjqsl6E68fw3J0eG1kRw79CJvn8NakxxZhBnLxLjCK9PA7XxIaZvDFPlqw1xr7e7FzxGv8KjGvOuYc69LEVEfq+nSDCUKhUEDXdjzWNjoUdG1ih0hwvixdjOqYxTy2PH2Pmr+ep1iSKtxUR+ns8W4SSYSfIkQqUjzc+B6igc01uNNCsxe1UbkxNROUcw4pg8zTu2a3x0jlRhPqrIYWKUitQfHrGKPN/oQjTpjgRzDpi83VsToSWZK05L5PTXg1qUN7Gq2OXnpTUDNOcc0QoG9RqVtlYJ0ViUYTasY6l+7w0ujqsFsGeqxcovQrmCmQ+W6wVYVa4RpPNmPoTrNyzIjTmj0LP3edlsfLr49DgvBuMY8smxsL30X4K3dO7VoQ+xjwxb7nO2JjcRD+mfU0fpVBehLSefHy4hz62I8KnfmKOxR2jFyUWyTetjFKMtSJ015i1GbnsdWNMxuQGDtHNa5rcEKHH5d7c7wgdRgT4vSACCEQAgQggEAEEIoBABBCIAAIRQCACCEQAgQggEAEEIoBABBCIAAIRQCACCEQAsRv+C4/43RHCf3B0+hzGKD2dAAAAAElFTkSuQmCC" InformativeScreenshot="512fdfe5e47e384df27de99af86c7a73.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='QRadar - Log Activity' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="161, 203, 112, 48" ElementType="Text" FriendlyName="'Offenses'" FullSelectorArgument="&lt;webctrl id='TAB_SEM' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='TAB_SEM' tag='A' type='' class='sy-header__favourites__link' aaname='Offenses' check:innerText='Offenses' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHQAAAA0CAYAAABbwhxLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAI8SURBVHhe7Zq9bcMwEEa9iNuM4B2SEVJlFw/gATyAgbRuvIA7F+5dGPAGdlylYSSSkk53lCgHyA8/fAc8IJZIncR3PKnIbL54dgSH2dPLmyM4cIeCQaEgvL5/eigUBAoFg0LBoFAwKBQMCgWFQsGgUDAoFAwKBYNCwaBQMCgUDAoFg0LBoFAwBoVuzk7FxW0S4+aLnTvFEe52dMvF2u1v8ffgHPIT1M4SQqMgL6c7vjzcvaLTVo6N4sXYMI4i/4KE0Li7zjtxTLC9VCfvbr/qjlHo/8EKTQjrI4XL1hri+hH/iHE9rMO81dFd4zEfqmB8EVRFsYldIIS+D5tPd4tcHnMerPCM0GZhZavV6DHZHRoXsZXbiDFzqmgF6DGykMIcU3y5PPG8LAJ976VjhE55QC0sJzR5TbW4pghqesLCe72TZcnmyXaf8vkFoUMiwu5pjvs5Oq8S4PPUkby/KXm6r/GxwigZIzS5sAo9ZorQoXhEaHdtEW0LnpanbcMizHu4YIzQfFuy77Lv7dA+U4VKGrly9z228xq5OG3YCk0I65FY5HGhQ9cLAnrv0AeF1vjc/trT8lhy58siIbQmPKRe4GZH6IcfF1phvj4H5owKTexA/dWay5MoEHOvhTMgtDvZj/SDZ4XWxMVuQ8nLC62JhSbCtNhMnnBNGeMdoDRGhZIyoVAwKBQMCgWDQsGgUDAoFAwKBYNCwaBQMCgUDAoFg0LBoFAwKBQMCgWDQsGgUDAoFIxZ/OcaBkQ49wWLYK727ZorBQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-11, -11, 1942, 1030" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAATSSURBVGhDzZlrqBRlGMfX7vewMA0qulBkfQhKozSP6x5RJI3CThBYFJFBmeDl7OVotH3ICCKC+hBFZAQVB+pDpmSd3WFPYmBFRRejoDCToiPe0Tqpx98zPhuz776z7+ycmXP2D392Z97n+s7zvvPMTCYtzClUb5pTrG72yX893fnI5r3LCHo9PAZHlPJ/vYypWOdhQXnTBQS5Dh7WoG2UsXUiq2rjj1uWfnl6rlhZRmBDgUBdHBId0VUz4wMCWUwgPxvBRabqLlZzY4dcoTIjW/S2mgFZWaou53d30/kAxZbYVPPpoau3di07yvu2IMIoenMLn16I3vMcHzHHG4ht8eE7SxKzSoOTmKWXcTLc5NRBNeGDRK6gbN7m/HFTLsBh8SU+VS0+bl+x9WwMluD+gIO2qKYakOur3MxYxZQ1KD5LEoOqRUe5XD6FWXgIAzsDBmNRTVpBydyJzPemjsGdEovEpGpusPBWWgzF4rzVmy9Rs1b09PSfmitVHkX2T1O3gcSkKm6wIxStRuLxAPbWLipvOEfNW0Gi5zLTTyN/yND3KTGpqBsJJ1DnH8z0w65SyPZ6Uyit15A/GtTvhATq/JYA56urUHSXBm5A9qO6Xicl4DNb8j4hEWeXyrabQ+6r8UygoRQMHiPAN91d6siEWX2Dl+qBG0kmIKVAkBtsYwEeZpd5dmZ+y/kawuiQZAJqMsMOkyXIL2wyAf4NH8+WvdNULR7SSOAkRiZwNe7n/G+mnMGfWCN3q1L7SC+Bk1jw5KYzuSKrGN9jygeJzGAuX7lV1aIj7QTquKP42USuyAvI/WPqGXxPGkFVcyPJBAjwHjUbCmb6SmTfgaFdqsSk4m4kmYByC1vlbWo+FMhMQ9YzdH2OdwJKrz/XW7lG3YSCBbwQ+R+Cuh2SgM9hyuol7g8XqzsrpEtFdin0u9ROSqDOfdwX8uz5Z6lbK+pdKkkv01NuJJzAd5ZzQe7IFrwlco9Q96NHkglIKVDTj/B/lznWQGnYaNw0hNEBg71NDmJSTWbkgYbjp+DB4LiFG0nmRlWLB2bsXovhWFST/6O7b2Aytf8qY6261KNcjdfb6kCDIIHrLUZjUU02oStfm8ri/NCmE+Ahkn2GhX6eqkWDbmGu23skqslQEODsCF3qrrZfr1CHX1sMxeFbXWtql6vZEDi71I0qGB1sbU9YDMXlEcryOXnFqOatkC6VB//VTN7eoD674iIViY6ecv8ZKLv69nY5RLksd71Wn7/i44uQfRH+C3+Xktah9sBMPKiOk+YvstOpm1DMLQ5cjdxCPWwf8g5HbjCWAJLi51yRmeouHcgCxFHr136tWS8F25hPttMPaO6uU5fJQx7rcNTq21coRb9rbe0qFue7HLd6rf4fV+OVRF6r28A214OT4JfHSFR1H93Fgemcq5kyBne7t92YkAWFA1cv00BVbQAzfRcT8mOTvGyffdVuFUsHOJEP2JG/G6haE/wuteA9hsxfvmyh+qu0FzqcLqTJwqnrC4tP1wOL9DlckZWu7wipgIX5AEHK2zRr8Modcj9p6wvLWEKebQnyDdhqhxF+Q93PU7XOA2UwmyC3G0E3k2eBRB8fk4T0T34TyIK0BL9dSm7UL27HArLDSHvMHXabkITuS2cNZDInAKdO1Frc0bEdAAAAAElFTkSuQmCC" InformativeScreenshot="fbf3078a6f6bbbb85741f2a77ac0aeb4.png" Selector="&lt;html app='chrome.exe' title='QRadar - Dashboard' /&gt;" Url="https://ng-siem.persistent.co.in/console/qradar/jsp/QRadar.jsp" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
